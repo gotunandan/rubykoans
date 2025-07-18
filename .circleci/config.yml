@@ -4,12 +4,12 @@ jobs:
   say-hello:
     machine:
       image: ubuntu-2204:current
-    resource_class: arm.medium
+    resource_class: small
     steps:
       - checkout
       - run:
           name: "Say hello"
-          command: "echo Hello, World! ; cat /etc/os-release ; date"
+          command: "echo Hello, World! ; cat /etc/os-release ; uname ; date"
 
 workflows:
   say-hello-workflow:
