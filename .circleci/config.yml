@@ -9,7 +9,7 @@ jobs:
       - checkout
       - run:
           name: "Say hello"
-          command: "echo Hello, World! ; date ; free -h ; lscpu ; uname ; cat /etc/os-release ; date"
+          command: "echo Hello, World! ; date ; free -h ; lscpu ; uname -a ; cat /etc/os-release ; date"
 
 workflows:
   say-hello-workflow:
