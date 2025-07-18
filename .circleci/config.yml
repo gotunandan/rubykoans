@@ -2,8 +2,9 @@ version: 2.1
 
 jobs:
   say-hello:
-    docker:
-      - image: busybox:latest
+    machine:
+      image: ubuntu-2204:current
+    resource_class: arm.medium
     steps:
       - checkout
       - run:
